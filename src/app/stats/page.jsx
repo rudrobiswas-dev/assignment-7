@@ -4,15 +4,15 @@ import { useContext } from "react";
 import { TimelineContext } from "../../context/TimelineContext";
 import Navbar from "../../components/Navbar";
 
-const COLORS = { Call: "#90EE90", Video: "#1D9E75", Text: "#FFFFC5" };
+const COLORS = { Text: "#7f37f5", Call: "#37a162", Video: "#274d40" };
 
 export default function Stats() {
   const { timeline } = useContext(TimelineContext);
 
   const data = [
+    { name: "Text",  value: timeline.filter(t => t.type === "Text").length },
     { name: "Call",  value: timeline.filter(t => t.type === "Call").length },
     { name: "Video", value: timeline.filter(t => t.type === "Video").length },
-    { name: "Text",  value: timeline.filter(t => t.type === "Text").length },
   ];
 
   const total = data.reduce((s, d) => s + d.value, 0);
@@ -25,14 +25,15 @@ export default function Stats() {
           Friendship Analytics
         </h1>
         <div className="bg-white p-5 rounded-xl shadow-2xl mx-1 sm:mx-3 md:mx-20 lg:mx-60 flex flex-col justify-center items-center">
-          <h2 className="text-xl text-gray-700 font-extrabold">By Interaction Type</h2>
+          <h2 className="w-full text-left text-xl text-green-900 font-extrabold">By Interaction Type</h2>
           <PieChart width={300} height={300}>
             <Pie
               data={data}
               dataKey="value"
-              innerRadius={80}
-              outerRadius={120}
-              paddingAngle={3}
+              innerRadius={95}
+              outerRadius={130}
+              paddingAngle={5}
+              cornerRadius={9}
             >
               {data.map((entry) => (
                 <Cell key={entry.name} fill={COLORS[entry.name]} />

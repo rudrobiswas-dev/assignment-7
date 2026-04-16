@@ -23,7 +23,17 @@ export default function Details() {
               <img src={friend.picture} className="w-24 rounded-full mx-auto" />
               <h2 className="text-center font-bold text-3xl text-gray-950">{friend.name}</h2>
 
-              <h3 className="inline-flex items-center rounded-full bg-red-400 px-2.5 py-0.5 text-xs font-medium text-gray-700">{friend.status}</h3>
+              <h3
+                className={`inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium text-gray-700 ${
+                  friend.status === "overdue"
+                    ? "bg-red-400"
+                    : friend.status === "almost due"
+                    ? "bg-yellow-400"
+                    : "bg-green-400"
+                }`}
+              >
+                {friend.status}
+              </h3>
               
               <div className="flex flex-wrap justify-center gap-2">
                           {friend.tags.map((tag, index) => (
@@ -48,24 +58,32 @@ export default function Details() {
           <div className="w-3/4">
                 <div className="flex justify-between space-x-5">
                   <div className="bg-white w-full px-20 py-10 rounded-xl shadow ">
-                    <h1 className="text-green-950 text-3xl font-bold">0</h1>
+                    <h1 className="text-green-950 text-3xl font-bold">
+                      {friend.days_since_contact}
+                    </h1>
                     <p className="text-gray-500 text-xl">Days Since Contact</p>
                   </div>
+
                   <div className="bg-white w-full px-20 py-10 rounded-xl shadow">
-                    <h1 className="text-green-950 text-3xl font-bold">0</h1>
+                    <h1 className="text-green-950 text-3xl font-bold">
+                      {friend.goal}
+                    </h1>
                     <p className="text-gray-500 text-xl">Goal (Days)</p>
                   </div>
+
                   <div className="bg-white w-full px-20 py-10 rounded-xl shadow">
-                    <h1 className="text-green-950 text-3xl font-bold">0</h1>
+                    <h1 className="text-green-950 text-3xl font-bold">
+                      {friend.next_due_date}
+                    </h1>
                     <p className="text-gray-500 text-xl">Next Due</p>
                   </div>
                 </div>
 
                 <div className="bg-white px-10 py-5 rounded-xl shadow flex justify-between my-5">
                   <div><h1 className="text-green-950 text-2xl font-bold pb-2">Relationship Goal</h1>
-                      <div className="flex space-x-1"><p className="text-gray-500 text-xl">Connect every</p> <p className="text-gray-900 text-xl">30 days</p></div>
+                      <div className="flex space-x-1"><p className="text-gray-500 text-xl">Connect every</p> <p className="text-gray-900 text-xl">{friend.goal} days</p></div>
                   </div>
-                  <button className="block h-fit  bg-gray-600 text-lg text-gray-950 py-1 px-3 rounded">Edit</button>
+                  <button className="block h-fit  bg-gray-300 text-lg text-gray-950 py-1 px-3 rounded-xl shadow">Edit</button>
                 </div>
 
 
