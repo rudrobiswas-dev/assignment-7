@@ -135,7 +135,7 @@ export default function Details() {
                     key={type}
                     onClick={() => {
                       addEntry(type, friend.name);
-                      toast.success(`${type} added`);
+                      toast.success(`${type} added with ${friend.name}`);
                     }}
                     className="w-full bg-gray-200 text-gray-900 py-4 rounded-xl shadow
                                       hover:bg-gray-300 hover:shadow-lg
