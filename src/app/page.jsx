@@ -51,11 +51,12 @@ export default function Home() {
             </div>
           ))}
         </div>
-        {/* Friends Title */}
+
+        <div className="border-t-2 border-gray-200 my-6"></div>
+
         <h1 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">
           Your Friends
         </h1>
-        {/* Friends Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 ">
           {friends.map((f) => (
             <Link key={f.id} href={`/friend/${f.id}`}>
@@ -71,7 +72,6 @@ export default function Home() {
                 <p className="text-sm text-gray-500">
                   {f.days_since_contact} days
                 </p>
-                {/* Tags */}
                 <div className="flex flex-wrap justify-center gap-2">
                   {f.tags.map((tag, index) => (
                     <span
@@ -82,7 +82,6 @@ export default function Home() {
                     </span>
                   ))}
                 </div>
-                {/* Status */}
                 <span
                   className={`text-xs px-3 py-1 rounded-full ${
                     f.status === "overdue"
