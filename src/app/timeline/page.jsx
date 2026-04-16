@@ -55,14 +55,11 @@ export default function Timeline() {
   return (
     <>
       <Navbar />
-
       <div className="bg-gray-50 min-h-screen px-4 sm:px-6 md:px-12 lg:px-24 xl:px-60 py-6">
         <div className="max-w-5xl mx-auto">
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 text-gray-800">
             Timeline
           </h1>
-
-          {/* DROPDOWN */}
           <div className="flex justify-start mb-6">
             <div className="relative w-full sm:w-72">
               <select
@@ -75,7 +72,6 @@ export default function Timeline() {
                 <option value="Text">Text</option>
                 <option value="Video">Video</option>
               </select>
-
               <div className="pointer-events-none absolute inset-y-0 right-3 flex items-center">
                 <svg
                   className="w-4 h-4 text-gray-500"
@@ -93,7 +89,6 @@ export default function Timeline() {
               </div>
             </div>
           </div>
-
           {/* LIST */}
           <div>
             {filteredTimeline.length === 0 ? (
