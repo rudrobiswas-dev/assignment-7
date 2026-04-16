@@ -33,6 +33,9 @@ export default function Footer() {
           </a>
         </div>
       </div>
+
+      <div className="border-t-2 border-green-900 my-6"></div>
+
       <div className="max-w-6xl mx-auto mt-10 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
         <div className="text-sm text-gray-500">
           © {new Date().getFullYear()} KeenKeeper. All rights reserved.

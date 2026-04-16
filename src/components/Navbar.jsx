@@ -9,10 +9,10 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   const linkClass = (href) =>
-    `flex items-center gap-2 px-4 py-2 rounded transition ${
+    `flex items-center gap-2 px-4 py-2 rounded-xl transition ${
       path === href
-        ? "bg-green-600 text-white"
-        : "text-gray-600 hover:bg-gray-100"
+        ? "bg-green-900 text-white"
+        : "text-gray-600 hover:bg-green-100"
     }`;
 
   return (
