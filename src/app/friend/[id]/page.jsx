@@ -133,16 +133,13 @@ export default function Details() {
                 {["Call", "Text", "Video"].map((type) => (
                   <button
                     key={type}
+                    type="button"
                     onClick={() => {
                       addEntry(type, friend.name);
-                      toast.success(`${type} added with ${friend.name}`);
+                      toast.success(`${type} added`);
                     }}
-                    className="w-full bg-gray-200 text-gray-900 py-4 rounded-xl shadow
-                                      hover:bg-gray-300 hover:shadow-lg
-                                        active:scale-95
-                                        transition-all duration-200
-                                        cursor-pointer"
-                                      >
+                    className="w-full bg-gray-200 text-gray-900 py-4 rounded-xl shadow hover:bg-gray-300 transition"
+                  >
                     {type}
                   </button>
                 ))}
