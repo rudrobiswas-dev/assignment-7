@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+KeenKeeper
 
-## Getting Started
+KeenKeeper is a small web app I built to help keep track of friendships and stay in touch with people regularly. The idea is simple — sometimes we forget to reach out, so this app helps remind and organize interactions.
 
-First, run the development server:
+What this project does
+Shows a list of friends with basic information
+Tracks how many days since last contact
+Lets you quickly log interactions (Call, Text, Video)
+Saves those interactions in a timeline
+Allows filtering the timeline by interaction type
+Displays a simple chart of interaction data
+Works on mobile, tablet, and desktop
+How it works
+Friend data is loaded from a JSON file
+Clicking on a friend opens a detailed page
+From there, you can log a call, text, or video interaction
+Each action adds an entry to the timeline
+The timeline page shows all past activities
+Technologies used
+Next.js (App Router)
+React
+Tailwind CSS
+Recharts
+React Hot Toast
+React Icons
+Running the project locally
 
-```bash
+Clone the repo:
+
+git clone https://github.com/
+
+Go to the project folder:
+
+cd keenkeeper
+
+Install dependencies:
+
+npm install
+
+Start the server:
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open http://localhost:3000
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Notes
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This project was built as part of an assignment. I focused on making the UI clean and making sure all required features work properly.
 
-## Learn More
+Possible improvements
+Add search functionality
+Add sorting for timeline
+Store data in a database instead of memory
+Author
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Rudro Biswas
