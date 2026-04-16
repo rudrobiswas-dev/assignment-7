@@ -43,30 +43,40 @@ export default function Timeline() {
       <Navbar />
 
       <div className="bg-gray-50 min-h-screen px-60 py-6">
-
-        {/* Title */}
         <h1 className="text-4xl font-bold mb-6 text-gray-800">
           Timeline
         </h1>
-
-        {/* ✅ FILTER DROPDOWN */}
+        {/*DROPDOWN */}
         <div className="flex justify-start mb-6">
-          <select
-            value={filter}
-            onChange={(e) => setFilter(e.target.value)}
-            className="w-72 px-4 py-3 rounded-xl bg-white shadow-xl text-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-500"
-          >
-            <option value="All" className="text-2xl text-bold">Filter timeline</option>
-            <option value="Call" className="text-2xl text-bold">Call</option>
-            <option value="Text" className="text-2xl text-bold">Text</option>
-            <option value="Video" className="text-2xl text-bold">Video</option>
-          </select>
+          <div className="relative w-72">
+            <select
+              value={filter}
+              onChange={(e) => setFilter(e.target.value)}
+              className="w-full px-4 py-3 pr-10 rounded-xl bg-white shadow-xl text-green-900 appearance-none focus:outline-none focus:ring-2 focus:ring-green-600"
+            >
+              <option value="All">Filter timeline</option>
+              <option value="Call">Call</option>
+              <option value="Text">Text</option>
+              <option value="Video">Video</option>
+            </select>
+            <div className="pointer-events-none absolute inset-y-0 right-3 flex items-center">
+              <svg
+                className="w-4 h-4 text-gray-500"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
+          </div>
         </div>
 
-        {/* Timeline List */}
+        {/*List */}
         <div className="">
           {filteredTimeline.length === 0 ? (
-            <p className="text-gray-500">No interactions yet</p>
+            <p className="text-3xl text-green-900">No interactions yet</p>
           ) : (
             filteredTimeline.map((t) => (
               <div
