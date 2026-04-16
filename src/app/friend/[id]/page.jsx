@@ -84,8 +84,6 @@ export default function Details() {
 
           {/* RIGHT SIDE */}
           <div className="w-full lg:w-2/3 space-y-6">
-
-            {/* STATS */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
 
               <div className="bg-white p-6 rounded-xl shadow text-center">
@@ -110,8 +108,6 @@ export default function Details() {
               </div>
 
             </div>
-
-            {/* GOAL CARD */}
             <div className="bg-white p-5 rounded-xl shadow flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
 
               <div>
@@ -128,14 +124,10 @@ export default function Details() {
               </button>
 
             </div>
-
-            {/* QUICK CHECK-IN */}
             <div className="bg-white p-5 rounded-xl shadow">
-
               <h1 className="text-green-950 text-2xl mb-3">
                 Quick Check-In
               </h1>
-
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
 
                 {["Call", "Text", "Video"].map((type) => (
@@ -154,11 +146,8 @@ export default function Details() {
                     {type}
                   </button>
                 ))}
-
               </div>
-
             </div>
-
           </div>
         </div>
       </div>

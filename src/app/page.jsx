@@ -31,7 +31,7 @@ export default function Home() {
           <p className="text-sm sm:text-base text-gray-500 mt-2">
             Your personal shelf of meaningful connections. Browse, tend, and nurture the relationships that matter most.
           </p>
-          <button className="mt-4 bg-green-950 text-white px-5 py-2 rounded-lg hover:scale-105 transition">
+          <button className="mt-4 bg-green-950 text-white px-5 py-2 rounded-lg hover:shadow-lg active:scale-95 transition-all duration-200 cursor-pointer">
             + Add Friend
           </button>
         </div>
@@ -56,10 +56,10 @@ export default function Home() {
           Your Friends
         </h1>
         {/* Friends Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 ">
           {friends.map((f) => (
             <Link key={f.id} href={`/friend/${f.id}`}>
-              <div className="bg-white p-5 rounded-xl shadow-md hover:shadow-xl transition flex flex-col items-center space-y-3">
+              <div className="bg-white p-5 rounded-xl shadow-md hover:shadow-xl transition active:scale-110 flex flex-col items-center space-y-3">
                 <Image
                   src={f.picture}
                   alt={f.name}
