@@ -13,10 +13,8 @@ export default function RootLayout({ children }) {
           <div className="grow">
             {children}
           </div>
-
           {/* Footer */}
-          <Footer />
-          
+          <Footer />  
         </TimelineProvider>
       </body>
     </html>

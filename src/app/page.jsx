@@ -60,15 +60,13 @@ export default function Home() {
           {friends.map((f) => (
             <Link key={f.id} href={`/friend/${f.id}`}>
               <div className="bg-white p-5 rounded-xl shadow-md hover:shadow-xl transition flex flex-col items-center space-y-3">
-                
                 <Image
-  src={f.picture}
-  alt={f.name}
-  width={80}
-  height={80}
-  className="rounded-full shadow"
-/>
-
+                  src={f.picture}
+                  alt={f.name}
+                  width={80}
+                  height={80}
+                  className="rounded-full shadow"
+                />
                 <h2 className="text-gray-900 font-semibold">{f.name}</h2>
                 <p className="text-sm text-gray-500">
                   {f.days_since_contact} days
